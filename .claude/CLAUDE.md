@@ -29,7 +29,7 @@ make clean
 
 ### Dockerfile updates
 
-When modifying the Dockerfile, update the `REFRESHED_AT` ENV date if/when added. (Note: this project's Dockerfile does not currently set `REFRESHED_AT`; the template includes that pattern, adopt it if you start pinning base image digests.)
+When modifying the Dockerfile, update the `REFRESHED_AT` ENV date to the current date. (The base image is pinned by digest and the Dockerfile sets `REFRESHED_AT`; `docker-verify-refreshed-at-updated.yaml` enforces that it changes whenever the Dockerfile does.)
 
 ### Version
 
@@ -41,5 +41,5 @@ Standard Senzing-garage Docker workflows:
 
 - `docker-build-container.yaml` - Builds + tests on PR
 - `docker-push-containers-to-dockerhub.yaml` - Publishes to Docker Hub on tag / scheduled
-- `docker-verify-refreshed-at-updated.yaml` - Enforces REFRESHED_AT update (if/when adopted)
+- `docker-verify-refreshed-at-updated.yaml` - Enforces REFRESHED_AT update when the Dockerfile changes
 - `spellcheck.yaml`, `lint-workflows.yaml` - Standard checks
