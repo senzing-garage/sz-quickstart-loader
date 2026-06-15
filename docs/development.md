@@ -1,4 +1,4 @@
-# template-docker development
+# sz-quickstart-loader development
 
 The following instructions are used when modifying and building the Docker image.
 
@@ -20,8 +20,8 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 1. Set these environment variable values:
 
    ```console
-   export GIT_ACCOUNT=senzing
-   export GIT_REPOSITORY=template-docker
+   export GIT_ACCOUNT=senzing-garage
+   export GIT_REPOSITORY=sz-quickstart-loader
    export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
    export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
    ```
@@ -34,15 +34,15 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 
    ```console
    sudo docker build \
-     --tag senzing/template \
-     https://github.com/senzing-garage/template-docker.git#main
+     --tag senzing/sz-quickstart-loader \
+     https://github.com/senzing-garage/sz-quickstart-loader.git#main
    ```
 
 1. **Option #2:** Using `docker` command and local repository.
 
    ```console
    cd ${GIT_REPOSITORY_DIR}
-   sudo docker build --tag senzing/template .
+   sudo docker build --tag senzing/sz-quickstart-loader .
    ```
 
 1. **Option #3:** Using `make` command.

@@ -22,11 +22,13 @@
     "imageless",
     "jlumbroso",
     "makefiles",
+    "mypy",
     "osarch",
     "osdetect",
     "OSTYPE",
     "pkill",
     "projectatomic",
+    "pycache",
     "pydevproject",
     "PYTHONPATH",
     "Senzing",
@@ -38,6 +40,11 @@
     "zizmor"
   ],
   "ignorePaths": [
-    ".git/**"
+    ".git/**",
+    ".gitignore",
+    ".history/**",
+    ".mypy_cache/**",
+    ".venv/**",
+    "**/__pycache__/**"
   ]
 }

@@ -38,6 +38,7 @@ Version is tracked in the `Dockerfile` `LABEL Version` field.
 ## CI/CD
 
 Standard Senzing-garage Docker workflows:
+
 - `docker-build-container.yaml` - Builds + tests on PR
 - `docker-push-containers-to-dockerhub.yaml` - Publishes to Docker Hub on tag / scheduled
 - `docker-verify-refreshed-at-updated.yaml` - Enforces REFRESHED_AT update (if/when adopted)

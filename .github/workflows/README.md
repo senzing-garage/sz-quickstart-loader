@@ -63,7 +63,7 @@ this action moves the PR on the "Garage" project board to "Done".
 [Dependabot Approve and Merge GitHub Action]: dependabot-approve-and-merge.yaml
 [Lint Workflows GitHub Action]: lint-workflows.yaml
 [Move PR to Done Dependabot GitHub Action]: move-pr-to-done-dependabot.yaml
-[move-pr-to-done-dependabot.yaml]: move-pr-to-done-dependabotyaml
+[move-pr-to-done-dependabot.yaml]: move-pr-to-done-dependabot.yaml
 [senzing-factory/build-resources/.../add-labels-to-issue.yaml]: https://github.com/senzing-factory/build-resources/blob/main/.github/workflows/add-labels-to-issue.yaml
 [senzing-factory/build-resources/.../add-to-project-dependabot.yaml]: https://github.com/senzing-factory/build-resources/blob/main/.github/workflows/add-to-project-dependabot.yaml
 [senzing-factory/build-resources/.../add-to-project.yaml]: https://github.com/senzing-factory/build-resources/blob/main/.github/workflows/add-to-project.yaml

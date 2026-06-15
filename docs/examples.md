@@ -1,4 +1,4 @@
-# template-docker examples
+# sz-quickstart-loader examples
 
 ## Examples of CLI
 

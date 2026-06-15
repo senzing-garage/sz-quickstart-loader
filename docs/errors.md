@@ -1,1 +1,1 @@
-# template-docker errors
+# sz-quickstart-loader errors

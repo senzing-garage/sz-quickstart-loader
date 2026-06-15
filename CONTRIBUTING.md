@@ -70,7 +70,7 @@ The variables are used throughout the installation procedure.
 
 ```console
 export GIT_ACCOUNT=senzing-garage
-export GIT_REPOSITORY=template-docker
+export GIT_REPOSITORY=sz-quickstart-loader
 ```
 
 Synthesize environment variables.

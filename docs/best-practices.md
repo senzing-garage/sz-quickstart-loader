@@ -1,4 +1,4 @@
-# template-docker best practices
+# sz-quickstart-loader best practices
 
 ## README.md
 
@@ -33,7 +33,7 @@
    1. Change following value to appropriate Docker tag.
 
       ```make
-      DOCKER_IMAGE_NAME := senzing/template
+      DOCKER_IMAGE_NAME := senzing/sz-quickstart-loader
       ```
 
 1. Use `make docker-build-base` occasionally to populate the Docker image cache with layers that change infrequently.
@@ -45,5 +45,5 @@
    1. Change following value to appropriate Git repository name.
 
       ```markdown
-      export GIT_REPOSITORY=template-docker
+      export GIT_REPOSITORY=sz-quickstart-loader
       ```

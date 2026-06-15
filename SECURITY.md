@@ -18,4 +18,4 @@ please open it privately via the [Report a security vulnerability] link in the S
 
 In general, project dependencies are updated within 60 days of the dependency's release.
 
-[Report a security vulnerability]: https://github.com/senzing-garage/template-docker/security/advisories/new
+[Report a security vulnerability]: https://github.com/senzing-garage/sz-quickstart-loader/security/advisories/new
