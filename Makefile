@@ -10,7 +10,7 @@ include makefiles/osdetect.mk
 
 # Git variables
 
-GIT_REPOSITORY_NAME := $(shell basename `git rev-parse --show-toplevel`)
+GIT_REPOSITORY_NAME := $(shell basename $(shell git rev-parse --show-toplevel))
 GIT_VERSION := $(shell git describe --always --tags --long --dirty | sed -e 's/\-0//' -e 's/\-g.......//')
 
 # Docker variables
