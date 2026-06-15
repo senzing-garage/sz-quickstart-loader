@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard",
+    "docker:pinDigests"
+  ],
+  "enabledManagers": ["dockerfile", "docker-compose"],
+  "schedule": ["on sunday"],
+  "prCreation": "not-pending",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchPackagePrefixes": ["!senzing/"],
+      "minimumReleaseAge": "21 days"
+    }
+  ]
+}

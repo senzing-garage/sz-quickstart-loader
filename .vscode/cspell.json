@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "alnum",
+    "autoremove",
+    "bugtracker",
+    "buildx",
+    "CCLA",
+    "CODEOWNER",
+    "cooldown",
+    "coverprofile",
+    "Dockerfiles",
+    "dockerhub",
+    "DYLD",
+    "esbenp",
+    "godoc",
+    "GOPATH",
+    "gotest",
+    "gotestfmt",
+    "ICLA",
+    "jlumbroso",
+    "osarch",
+    "osdetect",
+    "OSTYPE",
+    "pkill",
+    "projectatomic",
+    "pydevproject",
+    "PYTHONPATH",
+    "Senzing",
+    "senzingsdk",
+    "taskkill",
+    "testdata",
+    "toplevel",
+    "venv",
+    "zizmor"
+  ],
+  "ignorePaths": [
+    ".git/**"
+  ]
+}

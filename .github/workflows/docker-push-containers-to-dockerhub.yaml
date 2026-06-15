@@ -1,0 +1,57 @@
+# This workflow should only be added to public repositories
+
+name: Docker push containers to dockerhub
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+permissions: {}
+
+jobs:
+  docker-push-containers-to-dockerhub:
+    permissions:
+      attestations: write
+      contents: write
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Get repository name
+        id: repo-basename
+        run: |
+          echo "repo=$(basename ${{ github.repository }})" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: false
+          swap-storage: true
+
+      - name: Build docker image and push to DockerHub
+        uses: senzing-factory/github-action-docker-buildx-build@v2
+        with:
+          build-options: |
+            VERSION=${{ github.ref_name }}
+          image-repository: senzing/${{ steps.repo-basename.outputs.repo }}
+          image-tag: ${{ github.ref_name }}
+          password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
+          push: true
+          sign-image: true
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+
+      - name: Notify Slack on failure
+        if: failure() || cancelled()
+        uses: senzing-factory/build-resources/slack-failure-notification@v4
+        with:
+          job-status: ${{ job.status }}
+          slack-channel: ${{ secrets.SLACK_CHANNEL }}
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
