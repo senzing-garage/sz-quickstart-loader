@@ -1,0 +1,6 @@
+services:
+  sut:
+    build: .
+    entrypoint: [""]
+    # Smoke test: confirm the build produced a usable loader binary.
+    command: ["sh", "-c", "test -x /opt/senzing/er/bin/sz_file_loader && echo 'smoke test passed: sz_file_loader present'"]

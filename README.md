@@ -1,2 +1,3 @@
-# sz_fileloader
-Simple sz_fileloader wrapper container
+# sz-quickstart-loader
+
+Simple sz_file_loader wrapper container
