@@ -41,7 +41,7 @@ jobs:
         with:
           build-options: |
             VERSION=${{ github.ref_name }}
-          image-repository: senzing/${{ steps.repo-basename.outputs.repo }}
+          image-repository: senzing/sz-file-loader
           image-tag: ${{ github.ref_name }}
           password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
           push: true
