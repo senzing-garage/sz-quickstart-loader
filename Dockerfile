@@ -5,7 +5,7 @@ ARG BASE_IMAGE=senzing/senzingsdk-runtime:4.3.2@sha256:dfdbc936b503fc5ec044524ea
 FROM ${BASE_IMAGE}
 
 ARG VERSION=dev
-LABEL Name="senzing/sz_file_loader" \
+LABEL Name="senzing/sz-file-loader" \
       Maintainer="support@senzing.com" \
       Version="${VERSION}"
 
