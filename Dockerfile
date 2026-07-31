@@ -1,7 +1,7 @@
 # docker build -t senzing/sz-quickstart-loader .
 # docker run --user $UID -it -v $PWD:/data -e SENZING_ENGINE_CONFIGURATION_JSON senzing/sz-quickstart-loader -f /data/<input-file>
 
-ARG BASE_IMAGE=senzing/senzingsdk-runtime:4.3.3@sha256:505a83fc83641d65f64a8a57a1157dcfde791747952fbc8bb8d16b7c246b43ea
+ARG BASE_IMAGE=senzing/senzingsdk-runtime:4.3.4@sha256:3426be4ee9e84200e7977b7731652a4267877e4f1cc913bc3732b10f979025b7
 FROM ${BASE_IMAGE}
 
 ARG VERSION=dev
@@ -9,7 +9,7 @@ LABEL Name="senzing/sz-file-loader" \
       Maintainer="support@senzing.com" \
       Version="${VERSION}"
 
-ENV REFRESHED_AT=2026-07-15
+ENV REFRESHED_AT=2026-07-31
 
 USER root
 
